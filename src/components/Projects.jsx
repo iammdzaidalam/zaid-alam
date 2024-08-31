@@ -13,12 +13,14 @@ const Projects = () => {
             rel="noopener noreferrer"
             className="block"
           >
-            <div className="relative mb-4 overflow-hidden rounded-lg bg-white shadow-lg">
+            <div className="relative mb-4 overflow-hidden rounded-lg bg-black shadow-lg">
               <img
                 src={project.imgSrc}
                 alt={project.title}
                 className="h-auto w-full object-cover"
-                loading="lazy"
+                loading='eager'
+            style={{ opacity: 0, transition: 'opacity 0.5s ease-in-out' }}
+            onLoad={(e) => e.currentTarget.style.opacity = 1}
               />
               <div className="absolute bottom-0 left-0 right-0 m-0 p-8 text-white backdrop-blur-md">
                 <h3 className="text-3xl">{project.title}</h3>
