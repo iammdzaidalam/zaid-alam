@@ -137,7 +137,7 @@ export const SOCIAL_MEDIA_LINKS = [
 ];
 
 export const CONTACT = {
-  text: "I'm excited to collaborate on new projects. Let's connect and create something amazing together. Reach out to discuss opportunities!",
+  text: "I'm excited to collaborate on new projects. Let's connect and create something amazing together. Reach me out to discuss opportunities!",
   email: "iammdzaidalam@gmail.com",
   phone: "+(91 - 6205335274)",
 };
