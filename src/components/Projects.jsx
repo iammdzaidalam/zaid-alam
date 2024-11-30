@@ -22,7 +22,7 @@ const Projects = () => {
             style={{ opacity: 0, transition: 'opacity 0.5s ease-in-out' }}
             onLoad={(e) => e.currentTarget.style.opacity = 1}
               />
-              <div className="absolute bottom-0 left-0 right-0 m-0 p-8 text-customText backdrop-blur-md">
+              <div className="absolute bottom-0 left-0 right-0 m-0 p-8 text-customText backdrop-blur-sm bg-customText2 bg-opacity-80">
                 <h3 className="text-3xl">{project.title}</h3>
                 <p className="max-w-xs text-lg">{project.description}</p>
               </div>

@@ -6,7 +6,7 @@ import { AnimatePresence , motion} from 'framer-motion';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
-
+    
     const toggleMenu = () => setIsOpen(!isOpen);
 
     useEffect(() => {

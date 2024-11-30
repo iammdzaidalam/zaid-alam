@@ -6,18 +6,13 @@ import {
 } from "react-icons/fa6";
 
 import portfolio from "../assets/portfolio.jpg";
-import project2 from "../assets/project2.webp";
-import project4 from "../assets/project4.webp";
-// import project3 from "../assets/project3.webp";
-// import project5 from "../assets/project5.webp";
-// import project6 from "../assets/project6.webp";
-// import project7 from "../assets/project7.webp";
-// import project8 from "../assets/project8.webp";
-// import project9 from "../assets/project9.webp";
+import prolancer from "../assets/Prolancer.jpg";
+import devquest from "../assets/DevquestProject.jpg";
+
 
 export const LINKS = [
-  { id: "projects", name: "projects" },
   { id: "about", name: "about" },
+  { id: "projects", name: "projects" },
   { id: "experience", name: "experience" },
   { id: "contact", name: "Contact" },
 ];
@@ -36,65 +31,21 @@ export const PROJECTS = [
   },
   {
     id: 2,
-    title: "ProLancer",
+    title: "DemonSlayer-DevQuest",
     description:
-      "A freelancing platform where users can buy and sell services, as well as place bids on various projects.",
-    imgSrc: project2,
-    link: "https://project-sih-2024.vercel.app/",
-  },
-  // {
-  //   id: 3,
-  //   title: "TBD",
-  //   description:
-  //     "TBD.",
-  //   imgSrc: project3,
-  //   link: "https://iammdzaidalam-2kl9.vercel.app/",
-  // },
-  {
-    id: 4,
-    title: "TBD",
-    description:
-      "TBD",
-    imgSrc: project4,
-    link: "https://example.com/blog-platform",
-  },
-  // {
-  //   id: 5,
-  //   title: "TBD",
-  //   description: "TBD",
-  //   imgSrc: project5,
-  //   link: "https://example.com/task-management-tool",
-  // },
-  // {
-  //   id: 6,
-  //   title: "TBD",
-  //   description:
-  //     "TBD",
-  //   imgSrc: project6,
-  //   link: "https://example.com/online-learning-platform",
-  // },
-  // {
-  //   id: 7,
-  //   title: "TBD",
-  //   description: "TBD",
-  //   imgSrc: project7,
-  //   link: "https://example.com/fitness-tracker",
-  // },
-  // {
-  //   id: 8,
-  //   title: "TBD",
-  //   description: "TBD",
-  //   imgSrc: project8,
-  //   link: "https://example.com/recipe-app",
-  // },
-  // {
-  //   id: 9,
-  //   title: "TBD",
-  //   description:
-  //     "TBD",
-  //   imgSrc: project9,
-  //   link: "https://example.com/weather-dashboard",
-  // },
+    "Website built for BIT Mesra's IETE Devquest 2024, showcasing my skills, securing 4th place.",
+    imgSrc: devquest,
+    link: "https://iammdzaidalam.github.io/IETE-DEVQUEST/",
+    },
+      // {
+      //   id: 3,
+      //   title: "ProLancer",
+      //   description:
+      //     "A freelancing platform where users can buy and sell services, as well as place bids on various projects.",
+      //   imgSrc: prolancer,
+      //   link: "https://project-sih-2024.vercel.app/",
+      // },
+  
 ];
 
 export const ABOUT =

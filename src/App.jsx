@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import Work from './components/Work';
 import { AnimatePresence } from 'framer-motion';
 import Preloader from './components/Preloader';
+import CodeforcesProfile from './components/CodeforcesProfile';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -36,9 +37,10 @@ const App = () => {
         <Navbar />
         <Hero />
         <Marquee />
-        <Projects />
         <About />
+        <Projects />
         <Work />
+        <CodeforcesProfile/>
         <Contact />
     </main>
   );

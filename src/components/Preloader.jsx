@@ -23,11 +23,14 @@ export default function Preloader() {
 
   useEffect(() => {
     if (index === words.length - 1) return;
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setIndex(index + 1);
-    }, index === 0 ? 1000 : 150);
+    }, index === 0 ? 1000 : 150); 
+
+    return () => clearTimeout(timeout);
   }, [index]);
 
+ 
   const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${
     dimension.height + 300
   } 0 ${dimension.height}  L0 0`;
@@ -76,11 +79,11 @@ export default function Preloader() {
             initial="initial"
             animate="enter"
             exit={index === words.length - 1 ? "exit" : undefined}
-            variants={index === words.length - 1 ? zoomOut : opacity} // Ensure no duplication
+            variants={index === words.length - 1 ? zoomOut : opacity} 
           >
-            {/* Render circle conditionally */}
+            
             {index !== words.length - 1 && (
-              <span className="block w-2.5 h-2.5 bg-customText rounded-full mr-2"></span>
+              <span className="block w-2.5 h-2.5 bg-customText rounded-full mr-2"></span> 
             )}
             {words[index]}
           </motion.p>
