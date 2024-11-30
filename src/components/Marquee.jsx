@@ -2,7 +2,7 @@ import { MARQUEE_TEXT } from "../constants"
 import { motion } from "framer-motion"
 const Marquee = () => {
   return (
-    <div className="mt-4 w-full bg-lime-300 text-black lg:py-6">
+    <div className="mt-4 w-full bg-customText text-customText2 lg:py-6">
       <div className="flex overflow-hidden whitespace-nowrap">
         {[...Array(2)].map((_, index) => (
           <motion.h1

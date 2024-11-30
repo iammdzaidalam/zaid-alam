@@ -8,7 +8,7 @@ import Work from './components/Work'
 
 const App = () => {
   return (
-    <main className='font-light text-white antialiased selection:bg-lime-300 selection:text-black'>
+    <main className='font-light text-customText antialiased selection:bg-customBgSel selection:text-customText2'>
       <Navbar />
       <Hero />
       <Marquee />

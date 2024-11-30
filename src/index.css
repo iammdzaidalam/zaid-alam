@@ -6,7 +6,9 @@
 
 :root{
   font-family: "Oswald", sans-serif;
-  background-color: #080808;
-  scroll-behavior: smooth;
+  /* background-color: #080808; */
+  background-color: #afa18f;
+  /* color:#afa18f; */
+  scroll-behavior: smooth !important;
 
 }
