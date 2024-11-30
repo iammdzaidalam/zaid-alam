@@ -13,7 +13,7 @@ const Projects = () => {
             rel="noopener noreferrer"
             className="block"
           >
-            <div className="relative mb-4 overflow-hidden rounded-lg bg-zinc-900 shadow-lg">
+            <div className="relative mb-4 overflow-hidden rounded-lg bg-customText2 shadow-lg">
               <img
                 src={project.imgSrc}
                 alt={project.title}

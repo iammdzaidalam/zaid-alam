@@ -1,8 +1,17 @@
-'use client';
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+"use client";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
-const words = ["Hello", "سلام" ,"سلام" , "السَّلاَمُ عَلَيْكُمْ", "ਸਤ ਸ੍ਰੀ ਅਕਾਲ", "ନମସ୍କାର", "নমস্কার", "नमस्ते" ];
+const words = [
+  "Hello",
+  "سلام",
+  "السَّلاَمُ عَلَيْكُمْ",
+  "ਸਤ ਸ੍ਰੀ ਅਕਾਲ",
+  "ନମସ୍କାର",
+  "নমস্কার",
+  "नमस्ते",
+  "I AM",
+];
 
 export default function Preloader() {
   const [index, setIndex] = useState(0);
@@ -19,8 +28,12 @@ export default function Preloader() {
     }, index === 0 ? 1000 : 150);
   }, [index]);
 
-  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height + 300} 0 ${dimension.height}  L0 0`;
-  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`;
+  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${
+    dimension.height + 300
+  } 0 ${dimension.height}  L0 0`;
+  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${
+    dimension.height
+  } 0 ${dimension.height}  L0 0`;
 
   const curve = {
     initial: {
@@ -40,7 +53,12 @@ export default function Preloader() {
 
   const slideUp = {
     initial: { top: 0 },
-    exit: { top: '-100vh', transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 } },
+    exit: { top: "-100vh", transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 } },
+  };
+
+  const zoomOut = {
+    initial: { scale: 1 },
+    exit: { scale: 0, transition: { duration: 1, ease: "easeOut" } },
   };
 
   return (
@@ -48,18 +66,22 @@ export default function Preloader() {
       variants={slideUp}
       initial="initial"
       exit="exit"
-      className="fixed top-0 left-0 w-full h-full flex items-center justify-center  z-[100]" 
+      className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-[100]"
     >
       {dimension.width > 0 && (
         <>
           {/* Text animation */}
           <motion.p
-            variants={opacity}
+            className="text-customText text-4xl flex items-center absolute z-10"
             initial="initial"
             animate="enter"
-            className="text-customText text-4xl flex items-center absolute z-10"
+            exit={index === words.length - 1 ? "exit" : undefined}
+            variants={index === words.length - 1 ? zoomOut : opacity} // Ensure no duplication
           >
-            <span className="block w-2.5 h-2.5 bg-customText rounded-full mr-2"></span>
+            {/* Render circle conditionally */}
+            {index !== words.length - 1 && (
+              <span className="block w-2.5 h-2.5 bg-customText rounded-full mr-2"></span>
+            )}
             {words[index]}
           </motion.p>
 

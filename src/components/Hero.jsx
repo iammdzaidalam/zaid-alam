@@ -39,7 +39,8 @@ const Hero = () => {
             style={{ opacity: 0, transition: 'opacity 0.5s ease-in-out' }}
             onLoad={(e) => e.currentTarget.style.opacity = 1}
           />
-          <div className='absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent' />
+          <div className='absolute inset-0 bg-gradient-to-b from-customText2 via-transparent to-transparent top-8 opacity-75' />
+          <div className='absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent top-8' />
         </div>
       </div>
     </section>

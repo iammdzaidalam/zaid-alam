@@ -5,7 +5,7 @@ import {
   FaInstagram,
 } from "react-icons/fa6";
 
-import project1 from "../assets/project1.webp";
+import portfolio from "../assets/portfolio.jpg";
 import project2 from "../assets/project2.webp";
 import project4 from "../assets/project4.webp";
 // import project3 from "../assets/project3.webp";
@@ -31,7 +31,7 @@ export const PROJECTS = [
     title: "Portfolio Website",
     description:
       "A personal portfolio website to showcase projects and skills.",
-    imgSrc: project1,
+    imgSrc: portfolio,
     link: "https://zaid-alam.vercel.app/",
   },
   {
