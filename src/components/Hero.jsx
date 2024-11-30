@@ -9,7 +9,7 @@ const Hero = () => {
         <motion.h1
           initial={{ opacity: 0, filter: 'blur(10px)' }}
           animate={{ opacity: 1, filter: 'blur(0px)' }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 1.5 ,delay: 2 }}
           className='mt-16 overflow-hidden uppercase text-[12vw] font-semibold leading-none'
         >
           Zaid Alam
@@ -17,7 +17,7 @@ const Hero = () => {
         <motion.div 
         initial={{ opacity: 0, filter: 'blur(100px)' }}
         animate={{ opacity: 1, filter: 'blur(0px)' }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 2, delay: 2 }}
         className='mt-8'>
           <a
             href='/public/zaidresume.pdf'
