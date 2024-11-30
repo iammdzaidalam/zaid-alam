@@ -42,7 +42,7 @@ export const PROJECTS = [
 ];
 
 export const ABOUT =
-  "I specialize in building dynamic, responsive web applications with expertise in React, Tailwind and Node.js. I'm passionate about continuous learning and staying updated with the latest industry trends to implement modern practices in my projects.";
+  "I'm still learning and having fun with web development, diving into competitive programming, and exploring the world of AI. Currently working on building cool projects with React and Node, and I love pushing myself with challenges like Codeforces contests. Always down to learn new things and keep up with what's fresh in tech!";
 
 export const EXPERIENCES = [
   {
