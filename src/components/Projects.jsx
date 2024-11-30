@@ -3,7 +3,7 @@ import { PROJECTS } from "../constants";
 const Projects = () => {
   return (
     <section className="p-8" id="projects">
-      <h2 className="my-10 text-center text-3xl lg:text-8xl text-customText2">My Works</h2>
+      <h2 className="my-10 text-center text-3xl lg:text-8xl text-customText2">My Projects</h2>
       <div className="columns-1 gap-4 md:columns-2 lg:columns-3">
         {PROJECTS.map((project) => (
           <a

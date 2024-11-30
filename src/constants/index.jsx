@@ -1,7 +1,6 @@
 import { FaXTwitter, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
 
 import portfolio from "../assets/portfolio.jpg";
-import prolancer from "../assets/Prolancer.jpg";
 import devquest from "../assets/DevquestProject.jpg";
 
 export const LINKS = [
@@ -92,3 +91,25 @@ export const CONTACT = {
   email: "iammdzaidalam@gmail.com",
   phone: "+(91 - 6205335274)",
 };
+
+export const EDUCATION = [
+  {
+    institution: "Delhi Public School, Dhanbad",
+    degree: "High School",
+    year: "2011 - 2023",
+    description: [
+      "Completed 10th and 12th with a strong foundation in academics and extracurricular activities."
+    ],
+  },
+  {
+    institution: "BIT Mesra",
+    degree: "B.Tech in Computer Science and Engineering",
+    year: "2023 - Present",
+    description: [
+      "Currently pursuing a B.Tech in Computer Science and Engineering at BIT Mesra.",
+      "Focusing on web development, data structures, algorithms, and AI in my coursework.",
+      "Engaged in various student organizations, including IEEE and the Finance Club."
+    ],
+  },
+  
+];
