@@ -1,5 +1,5 @@
 import { LuImport } from 'react-icons/lu';
-import zaid from '../assets/mypic.jpg';
+import zaid from '../assets/zaid.jpg';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
