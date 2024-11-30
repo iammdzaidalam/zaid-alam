@@ -1,14 +1,8 @@
-import {
-  FaXTwitter,
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-} from "react-icons/fa6";
+import { FaXTwitter, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa6";
 
 import portfolio from "../assets/portfolio.jpg";
 import prolancer from "../assets/Prolancer.jpg";
 import devquest from "../assets/DevquestProject.jpg";
-
 
 export const LINKS = [
   { id: "about", name: "about" },
@@ -33,19 +27,18 @@ export const PROJECTS = [
     id: 2,
     title: "DemonSlayer-DevQuest",
     description:
-    "Website built for BIT Mesra's IETE Devquest 2024, showcasing my skills, securing 4th place.",
+      "Website built for BIT Mesra's IETE Devquest 2024, showcasing my skills, securing 4th place.",
     imgSrc: devquest,
     link: "https://iammdzaidalam.github.io/IETE-DEVQUEST/",
-    },
-      // {
-      //   id: 3,
-      //   title: "ProLancer",
-      //   description:
-      //     "A freelancing platform where users can buy and sell services, as well as place bids on various projects.",
-      //   imgSrc: prolancer,
-      //   link: "https://project-sih-2024.vercel.app/",
-      // },
-  
+  },
+  // {
+  //   id: 3,
+  //   title: "ProLancer",
+  //   description:
+  //     "A freelancing platform where users can buy and sell services, as well as place bids on various projects.",
+  //   imgSrc: prolancer,
+  //   link: "https://project-sih-2024.vercel.app/",
+  // },
 ];
 
 export const ABOUT =
@@ -54,17 +47,24 @@ export const ABOUT =
 export const EXPERIENCES = [
   {
     company: "IEEE Student Branch, BIT Mesra",
-    role: "Competitive Programmer",
+    role: "Associate Member, Web Developer, Competitive Programmer",
     year: "11/2023 - Present",
-    description:
-      "Developing and optimizing algorithms in C++ and C for competitive programming challenges. Achieved a Codeforces rating of 1337 with the Pupil rank. Collaborating with team members to solve complex problems and refine coding strategies.",
-  },
+    description: [
+      "Worked on C++ DSA and competitive programming through practice and contests, improving problem-solving skills.",
+      "Achieved a Codeforces rating of 1337 with the Pupil rank, constantly refining my coding strategies.",
+      "Joined a community of some of the best minds in tech at BIT Mesra."
+    ],
+  }
+  ,
   {
     company: "Finance Club, BIT Mesra",
-    role: "Frontend Developer",
+    role: "Associate Member, Web Designer and Developer",
     year: "08/2024 - Present",
-    description:
-      "Built user interfaces with React. Collaborated with designers to enhance user experiences and optimized performance for various devices. Contributed to code reviews to ensure high-quality code.",
+    description: [
+      "Currently building the official website for the Finance Club at BIT Mesra, ensuring a user-friendly and responsive design.",
+      "Interviewed junior years for entry into the club, helping assess their skills and suitability for the community.",
+      "Designed and contributed to the development of the upcoming club website, enhancing the overall digital presence of the club."
+    ],
   },
 ];
 

@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <>
         <nav className='fixed right-0 top-0 z-30 p-4'>
-            <button onClick={toggleMenu} className='rounded-md p-2'>
+            <button onClick={toggleMenu} className='rounded-md p-2 hover:text-customText2'>
                 {isOpen ? (
                     <FaTimes className='h-6 w-6'/>
                 ):(
