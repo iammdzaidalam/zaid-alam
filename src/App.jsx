@@ -17,7 +17,6 @@ const sections = [
   { id: 'projects', component: <Projects /> },
   { id: 'work', component: <Work /> },
   { id: 'codeforces', component: <CodeforcesProfile /> },
-  { id: 'contact', component: <Contact /> },
 ];
 
 const App = () => {
@@ -45,6 +44,7 @@ const App = () => {
       {sections.map((section) => (
         <FadeInWhenVisible key={section.id}>{section.component}</FadeInWhenVisible>
       ))}
+      <Contact />
     </main>
   );
 };
