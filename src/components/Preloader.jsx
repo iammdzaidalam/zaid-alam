@@ -90,7 +90,7 @@ export default function Preloader() {
 
           {/* Swoop animation */}
           <svg className="absolute top-0 w-full h-[calc(100%+300px)]">
-            <motion.path variants={curve} initial="initial" exit="exit"></motion.path>
+            <motion.path variants={curve} initial="initial" exit="exit" fill="#34302a"></motion.path>
           </svg>
         </>
       )}
