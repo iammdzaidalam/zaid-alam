@@ -15,15 +15,16 @@ const words = [
 export default function Preloader() {
   const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(null); // Initially set to null
 
+  // Set dimensions and check dark mode on mount
   useEffect(() => {
     setDimension({ width: window.innerWidth, height: window.innerHeight });
-
-    // Check the dark mode status on component mount
-    setIsDarkMode(document.documentElement.classList.contains('dark'));
+    const darkMode = document.documentElement.classList.contains('dark');
+    setIsDarkMode(darkMode); // Update state after checking dark mode class
   }, []);
 
+  // Handle word change animation
   useEffect(() => {
     if (index === words.length - 1) return;
     const timeout = setTimeout(() => {
@@ -62,6 +63,8 @@ export default function Preloader() {
     exit: { scale: 0, transition: { duration: 1, ease: "easeOut" } },
   };
 
+  if (isDarkMode === null) return null; // Don't render anything until dark mode is determined
+
   return (
     <motion.div
       variants={slideUp}
@@ -91,7 +94,7 @@ export default function Preloader() {
               variants={curve}
               initial="initial"
               exit="exit"
-              fill={isDarkMode ? "#afa18f" : "#34302a"} 
+              fill={isDarkMode ? "#afa18f" : "#34302a"} // Conditional fill color based on dark mode
             ></motion.path>
           </svg>
         </>
