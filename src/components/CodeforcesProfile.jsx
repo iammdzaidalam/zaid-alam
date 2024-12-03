@@ -7,7 +7,7 @@ const Codeforces = () => {
 
   const fetchUserInfo = async () => {
     try {
-      setError(null); // Clear previous errors
+      setError(null); 
       const response = await fetch(
         `https://codeforces.com/api/user.info?handles=${handle}&checkHistoricHandles=false`
       );

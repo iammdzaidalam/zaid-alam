@@ -6,7 +6,6 @@ const DarkModeToggle = () => {
 
     const checkTimeForMode = () => {
         const currentHour = new Date().getHours();
-        // Set dark mode from 7:01 PM to 5:59 AM
         if (currentHour >= 19 || currentHour < 6) {
             setIsDarkMode(true);
             document.documentElement.classList.add('dark');
