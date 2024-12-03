@@ -1,4 +1,3 @@
-"use client";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -16,27 +15,26 @@ const words = [
 export default function Preloader() {
   const [index, setIndex] = useState(0);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     setDimension({ width: window.innerWidth, height: window.innerHeight });
+
+    // Check the dark mode status on component mount
+    setIsDarkMode(document.documentElement.classList.contains('dark'));
   }, []);
 
   useEffect(() => {
     if (index === words.length - 1) return;
     const timeout = setTimeout(() => {
       setIndex(index + 1);
-    }, index === 0 ? 1000 : 150); 
+    }, index === 0 ? 1000 : 150);
 
     return () => clearTimeout(timeout);
   }, [index]);
 
- 
-  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${
-    dimension.height + 300
-  } 0 ${dimension.height}  L0 0`;
-  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${
-    dimension.height
-  } 0 ${dimension.height}  L0 0`;
+  const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height + 300} 0 ${dimension.height}  L0 0`;
+  const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height}  L0 0`;
 
   const curve = {
     initial: {
@@ -75,22 +73,26 @@ export default function Preloader() {
         <>
           {/* Text animation */}
           <motion.p
-            className="text-customText text-4xl flex items-center absolute z-10"
+            className="text-customText dark:text-darkBg text-4xl flex items-center absolute z-10"
             initial="initial"
             animate="enter"
             exit={index === words.length - 1 ? "exit" : undefined}
-            variants={index === words.length - 1 ? zoomOut : opacity} 
+            variants={index === words.length - 1 ? zoomOut : opacity}
           >
-            
             {index !== words.length - 1 && (
-              <span className="block w-2.5 h-2.5 bg-customText rounded-full mr-2"></span> 
+              <span className="block w-2.5 h-2.5 bg-customText dark:bg-darkBg rounded-full mr-2"></span>
             )}
             {words[index]}
           </motion.p>
 
           {/* Swoop animation */}
           <svg className="absolute top-0 w-full h-[calc(100%+300px)]">
-            <motion.path variants={curve} initial="initial" exit="exit" fill="#34302a"></motion.path>
+            <motion.path
+              variants={curve}
+              initial="initial"
+              exit="exit"
+              fill={isDarkMode ? "#afa18f" : "#34302a"} 
+            ></motion.path>
           </svg>
         </>
       )}

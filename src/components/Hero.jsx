@@ -24,7 +24,7 @@ const Hero = () => {
             target='_blank'
             rel='noopener noreferrer'
             download
-            className='flex items-center rounded-xl bg-customText p-2 px-3 font-sans font-medium text-customText2 hover:bg-customText2 hover:text-customText transition-colors duration-300 '
+            className='flex items-center rounded-xl bg-customText p-2 px-3 font-sans font-medium text-customText2 hover:bg-customText2 hover:text-customText transition-colors duration-300 dark:bg-darkText dark:hover:text-darkText dark:hover:bg-darkText2'
           >
             <span>Download CV</span>
             <LuImport className='ml-2' />

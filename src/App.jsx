@@ -11,12 +11,13 @@ import { AnimatePresence } from 'framer-motion';
 import Preloader from './components/Preloader';
 import CodeforcesProfile from './components/CodeforcesProfile';
 import FadeInWhenVisible from './components/FadeIn';
+import DarkModeToggle from './components/DarkModeToggle';
 
 const sections = [
   { id: 'about', component: <About /> },
   { id: 'projects', component: <Projects /> },
   { id: 'work', component: <Work /> },
-  { id: 'codeforces', component: <CodeforcesProfile /> },
+  // { id: 'codeforces', component: <CodeforcesProfile /> },
 ];
 
 const App = () => {
@@ -36,8 +37,9 @@ const App = () => {
   }, []);
 
   return (
-    <main className="font-light text-customText antialiased selection:bg-customBgSel selection:text-customText2 h-auto min-h-0">
+    <main className="font-light text-customText antialiased selection:bg-customBgSel selection:text-customText2 h-auto min-h-0 dark:bg-darkBg dark:text-darkText">
       <AnimatePresence mode="wait">{isLoading && <Preloader />}</AnimatePresence>
+      <DarkModeToggle/>
       <Navbar />
       <Hero />
       <Marquee />
