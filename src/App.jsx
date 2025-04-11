@@ -17,7 +17,7 @@ const sections = [
   { id: 'about', component: <About /> },
   { id: 'projects', component: <Projects /> },
   { id: 'work', component: <Work /> },
-  // { id: 'codeforces', component: <CodeforcesProfile /> },
+  { id: 'codeforces', component: <CodeforcesProfile /> },
 ];
 
 const App = () => {
