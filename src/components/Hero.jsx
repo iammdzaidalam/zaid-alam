@@ -20,7 +20,7 @@ const Hero = () => {
         transition={{ duration: 2, delay: 2 }}
         className='mt-8'>
           <a
-            href='/zaidresume.pdf'
+            href='/resume_zaid.pdf'
             target='_blank'
             rel='noopener noreferrer'
             download
